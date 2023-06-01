@@ -1,0 +1,14 @@
+<h2>Orders for {{ email }}</h2>
+<div>
+    <ul>
+        <li *ngFor="let order of orders">
+            <p>ID: {{ order._id }}</p>
+            <p>Name: {{ order.name }}</p>
+            <p>Total: {{ order.total }}</p>
+            <button (click)="markAsDelivered(order._id)">Delivered</button>
+        </li>
+    </ul>
+</div>
+<div>
+    <button type="button" [routerLink]="['/']">Back</button>
+</div>
